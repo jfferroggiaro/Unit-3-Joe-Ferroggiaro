@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class DrinkingAge{
   public static void main(String[] args){
-    Scanner input = new Scanner();
+    Scanner input = new Scanner(System.in);
     System.out.println("Enter Your Age");
     int age = input.nextInt();
     if(age >= 21){
