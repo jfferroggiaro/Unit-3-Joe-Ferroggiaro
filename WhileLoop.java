@@ -1,14 +1,17 @@
 public class WhileLoop{
   public static void main(String[] args){
-    int num = 0;
-    int dum = 8;
-    while(num < 3){
-      dum = 8;
-      while(dum > 2){
-        System.out.print(1+dum);
-        dum -= 2;
+    int count1 = 0;
+    int count2 = 0;
+    int totalCount = 0;
+    while(count1 <= 10){
+      count2 = 1;
+      while(count2 <= 50){
+        totalCount++;
+        System.out.println("Here Again");
+        count2++;
       }
-      num++;
+      count1++;
     }
+    System.out.println(totalCount);
   }
 }
