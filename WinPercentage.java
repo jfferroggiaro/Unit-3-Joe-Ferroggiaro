@@ -11,10 +11,11 @@ public class WinPercentage{
     while(!inputValid){
       System.out.println("How Many Games Played?");
       if(input.hasNextInt()){
-        if(input.nextInt() >= 0){
+        if(input.nextInt() > 0){
+          games = input.nextInt();
           inputValid = true;
         } else
-          System.out.println("Games Input Must be Greater or Equal to Zero");
+          System.out.println("Games Input Must be Greater than Zero");
           inputValid = false;
       } else {
         System.out.println("Games Input Must be an Integer");
@@ -22,7 +23,18 @@ public class WinPercentage{
       }
       System.out.println("How Many Wins?");
       if(input.hasNextInt()){
-        wins = input.nextInt();
+        if(input.nextInt() >= 0){
+          if(input.nextInt() <= games){
+            wins = input.nextInt();
+            inputValid = true;
+          } else {
+            System.out.println("Games Won Must be Less or Equal to Games Played");
+            inputValid = false;
+          }
+        } else {
+          System.out.println("Games Input Must be Greater or Equal to Zero");
+          inputValid = false;
+        }
       } else {
         System.out.println("Wins Input Must be an Integer");
         inputValid = false;
