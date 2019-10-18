@@ -5,9 +5,16 @@ public class WinPercentage{
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     boolean inputValid = false;
-    int games = 0;
-    int wins = 0;
+    System.out.println("How many games played?");
+    double games = input.nextDouble();
+    System.out.println("How many games won?");
+    double wins = input.nextDouble();
 
+    while(){
+
+    }
+
+/*******************************************************************************
     while(!inputValid){
       System.out.println("How Many Games Played?");
       if(input.hasNextInt()){
@@ -47,3 +54,5 @@ public class WinPercentage{
 
   }
 }
+
+*******************************************************************************/
